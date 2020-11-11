@@ -1,2 +1,2 @@
 # ChessBoardGame
-A chess game made with Java
+A chess game made with Java complete with GUI
