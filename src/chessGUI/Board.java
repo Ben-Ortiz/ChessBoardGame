@@ -3,6 +3,7 @@ package chessGUI;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 import javax.swing.JComponent;
 import chessPieces.Piece;
@@ -23,6 +24,21 @@ public class Board extends JComponent {
 	public Piece Active_Piece;
 	
 	private final int rows = 8;
+	private final int cols = 8;
+	private Integer[][] BoardGrid;
+	private String board_file_path = "images" + File.separator + "board.png";
+	
+	
+	public void initGrid() {
+		for(int i = 0; i < rows; i++) {
+			for(int j = 0; j < cols; j++) {
+				BoardGrid[i][j] = 0;
+			}
+		}
+		
+		
+	}
+	
 	
 	interface DrawingShape {
 	    boolean contains(Graphics2D g2, double x, double y);
